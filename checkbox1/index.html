@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <input type="checkbox" id="selectCheckbox" value="selectCheckbox" onclick=" myFun()"> Select All Checkbox <br>
+        <input type="checkbox" name="fruits" value="orange">orange <br>
+        <input type="checkbox" name="fruits" value="mango">mango <br>
+        <input type="checkbox" name="fruits" value="apple">apple <br>
+        <input type="checkbox" name="fruits" value="banana">banana <br>
+    </div>
+
+    <script>
+
+        function myFun() {
+            var selectedAll = document.getElementById("selectCheckbox");
+            if (selectedAll.checked == true) {
+                var allCheckbox = document.getElementsByName("fruits");
+                for (var i = 0; i < allCheckbox.length; i++) {
+                    allCheckbox[i].checked = true;
+                }
+            } else {
+                var allCheckbox = document.getElementsByName("fruits");
+                for (var i = 0; i < allCheckbox.length; i++) {
+                    allCheckbox[i].checked = false;
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
